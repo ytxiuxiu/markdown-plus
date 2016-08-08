@@ -4,7 +4,8 @@
   "description": "Markdown editor with extra features",
   "main": "index.js",
   "dependencies": {
-    "markdown-core": "^0.5.8"
+    "jquery": "^2.2.4",
+    "markdown-core": "git+https://github.com/ytxiuxiu/markdown-core.git#a14fd274526e7e91bd00a1e06a37770c654fd84d"
   },
   "keywords": [
     "markdown",
@@ -21,5 +22,5 @@
   "bugs": {
     "url": "https://github.com/tylingsoft/markdown-plus/issues"
   },
-  "homepage": "https://github.com/tylingsoft/markdown-plus#readme",
+  "homepage": "https://github.com/tylingsoft/markdown-plus#readme"
 }
