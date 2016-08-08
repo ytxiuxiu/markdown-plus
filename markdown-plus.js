@@ -161,17 +161,18 @@ $(function() {
     resizable: false,
     slidable: false,
     north: {
-      togglerLength_open: 128,
-      togglerLength_closed: 128,
+      // togglerLength_open: 128,
+      // togglerLength_closed: 128,
       size: 'auto',
-      togglerTip_open: 'Hide toolbar',
-      togglerTip_closed: 'Show toolbar',
-      onopen: function() {
-        editor.focus();
-      },
-      onclose: function() {
-        editor.focus();
-      }
+      closable: false,
+      // togglerTip_open: 'Hide toolbar',
+      // togglerTip_closed: 'Show toolbar',
+      // onopen: function() {
+      //   editor.focus();
+      // },
+      // onclose: function() {
+      //   editor.focus();
+      // }
     },
     east: {
       resizable: true,
@@ -421,9 +422,9 @@ $(function() {
     editor.focus();
   });
 
-  $('#toggle-toolbar').click(function() {
-    layout.toggle('north');
-  });
+  // $('#toggle-toolbar').click(function() {
+  //   layout.toggle('north');
+  // });
 
   $('#toggle-editor').click(function() {
     if (layout.panes.center.outerWidth() < 8) { // editor is hidden

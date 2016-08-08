@@ -19,7 +19,7 @@ html,body {
 
 
 #toolbar {
-  padding-left: 16px;
+  padding: 5px 16px;
   color: #666;
 }
 #toolbar .fa {

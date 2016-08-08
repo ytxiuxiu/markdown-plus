@@ -10,8 +10,8 @@ def css():
     local('curl https://cdn.jsdelivr.net/remodal/1.0.7/remodal-default-theme.css >> dist/markdown-plus.css')
     local('cat dist/markdown-core.min.css >> dist/markdown-plus.css')
     local('rm dist/markdown-core.min.css')
-    local('cat markdown-plus.css >> dist/markdown-plus.css')
-    local('cleancss -o dist/markdown-plus.min.css dist/markdown-plus.css')
+    # local('cat markdown-plus.css >> dist/markdown-plus.css')
+    local('cleancss -o dist/markdown-vendor.min.css dist/markdown-plus.css')
     local('rm dist/markdown-plus.css')
 
 
@@ -41,8 +41,8 @@ def js():
     local('echo "\n" >> dist/markdown-plus.js')
     local('cat sync_scroll.js >> dist/markdown-plus.js')
     local('echo "\n" >> dist/markdown-plus.js')
-    local('cat markdown-plus.js >> dist/markdown-plus.js')
-    local('uglifyjs dist/markdown-plus.js -cmo dist/markdown-plus.min.js')
+    # local('cat markdown-plus.js >> dist/markdown-plus.js')
+    local('uglifyjs -c -o dist/markdown-vendor.min.js dist/markdown-plus.js')
     local('rm dist/markdown-plus.js')
 
 
